@@ -8,7 +8,6 @@ from microsoft_agents.hosting.aiohttp import (
 )
 from aiohttp.web import Request, Response, Application, run_app
 
-
 def start_server(
    agent_application: AgentApplication, auth_configuration: AgentAuthConfiguration
 ):
