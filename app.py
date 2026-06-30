@@ -107,7 +107,6 @@ default_data_collection_info = {"step": "ask company name", "history": {}, "ai_r
 default_data_analysis_info = {"step": "ask analysis type", "history": {}, "ai_response": None, "step_count" : 0}
 default_data_report_info = {"step": "ask report style", "history": {}, "ai_response": None, "step_count" : 0}
 
-# 1. Define your Interception Middleware
 class InputInterceptorMiddleware:
     async def on_turn(
         self, 
@@ -115,12 +114,12 @@ class InputInterceptorMiddleware:
         next_turn: Callable[[], Awaitable[None]]
     ):
         #print('intercept_every_input', turn_context.activity.type, turn_context.activity.text)
-        
-        # Only intercept if the incoming activity is an actual user text message
 
         await conversation_state.load(turn_context)
 
         user_action = await user_action_accessor.get(turn_context, default_value_or_factory=lambda: default_user_action)
+
+        # Only intercept if the incoming activity is an actual user text message
 
         if turn_context.activity.type == "message" and turn_context.activity.text:
             user_raw_input = turn_context.activity.text.lower().strip() if turn_context.activity.text else ""
