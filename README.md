@@ -1,0 +1,2 @@
+# Company-Research-bot-
+A proof of concept of an AI-powered research assistant help analysts quickly gather company information, configure analysis parameters and generate customized reports through conversational workflows using Microsoft 365 Agents SDK with Python
