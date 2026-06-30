@@ -13,6 +13,8 @@ from collections.abc import Awaitable, Callable
 
 from microsoft_agents.activity import Activity, ActivityTypes, SuggestedActions, CardAction
 
+import copy
+
 def generate_selection_menu() -> Activity:
     """
     Generates an interactive selection menu with suggested actions for the user.
@@ -117,7 +119,7 @@ class InputInterceptorMiddleware:
 
         await conversation_state.load(turn_context)
 
-        user_action = await user_action_accessor.get(turn_context, default_value_or_factory=lambda: default_user_action)
+        user_action = await user_action_accessor.get(turn_context, default_value_or_factory=lambda: copy.deepcopy(default_user_action))
 
         # Only intercept if the incoming activity is an actual user text message
 
@@ -132,7 +134,7 @@ class InputInterceptorMiddleware:
                     return # Stops execution entirely; never calls next_turn()
 
             if(user_action['user_action'] == "Data Collection"):
-                data_collection_info = await data_collection_accessor.get(turn_context, default_value_or_factory=lambda: default_data_collection_info)
+                data_collection_info = await data_collection_accessor.get(turn_context, default_value_or_factory=lambda: copy.deepcopy(default_data_collection_info))
                 if(data_collection_info["step"] == "ask company name"):
                     #TODO: validate with ai if the company exists
                     pass
@@ -143,7 +145,7 @@ class InputInterceptorMiddleware:
                     #TODO: validate with ai if the timeframe is a valid timeframe (e.g., "last 5 years", "Q1 2023", etc.)
                     pass
             elif(user_action['user_action'] == "Data Analysis"):
-                data_analysis_info = await data_analysis_accessor.get(turn_context, default_value_or_factory=lambda: default_data_analysis_info)
+                data_analysis_info = await data_analysis_accessor.get(turn_context, default_value_or_factory=lambda: copy.deepcopy(default_data_analysis_info))
                 if(data_analysis_info["step"] == "ask analysis type"):
                     #Could actually validate with ai so that the input doesn't need to be gramatically perfect, but for now just check if the input is perfectly one of the three options
                     if(not(("comparison" in user_raw_input) ^ ("trend" in user_raw_input) ^ ("summary" in user_raw_input))):
@@ -151,7 +153,7 @@ class InputInterceptorMiddleware:
                         await turn_context.send_activity(generate_analysis_type_menu())
                         return # Stops execution entirely; never calls next_turn()
             elif(user_action['user_action'] == "Report Generation"):
-                data_report_info = await data_report_accessor.get(turn_context, default_value_or_factory=lambda: default_data_report_info)
+                data_report_info = await data_report_accessor.get(turn_context, default_value_or_factory=lambda: copy.deepcopy(default_data_report_info))
                 if(data_report_info["step"] == "ask report style"):
                     #Could actually validate with ai so that the input doesn't need to be gramatically perfect, but for now just check if the input is perfectly one of the two options
                     if(not(("short" in user_raw_input) ^ ("full" in user_raw_input))):
@@ -209,7 +211,7 @@ async def handle_conversation_logic(turn_context: TurnContext, turn_state: TurnS
 
     await conversation_state.load(turn_context)
 
-    user_action = await user_action_accessor.get(turn_context, default_value_or_factory=lambda: default_user_action)
+    user_action = await user_action_accessor.get(turn_context, default_value_or_factory=lambda: copy.deepcopy(default_user_action))
 
     #print(f"Current User Action: {user_action['user_action']}, User Input: {user_text}")
 
@@ -217,7 +219,7 @@ async def handle_conversation_logic(turn_context: TurnContext, turn_state: TurnS
     if user_action['user_action'] == "Data Collection" or (user_action['user_action'] is None and "data collection" in user_text.lower()):
         user_action['user_action'] = "Data Collection"
 
-        data_collection_info = await data_collection_accessor.get(turn_context, default_value_or_factory=lambda: default_data_collection_info)
+        data_collection_info = await data_collection_accessor.get(turn_context, default_value_or_factory=lambda: copy.deepcopy(default_data_collection_info))
 
         # assume for now company name would be provided (would need to validate with AI model probably)
         #print(f"(1) Step Count: {data_collection_info['step_count']}, Current Step: {data_collection_info['step']}, User Input: {user_text}")
@@ -261,7 +263,7 @@ async def handle_conversation_logic(turn_context: TurnContext, turn_state: TurnS
     elif user_action['user_action'] == "Data Analysis" or (user_action['user_action'] is None and "data analysis" in user_text.lower()):
         user_action['user_action'] = "Data Analysis"
 
-        data_analysis_info = await data_analysis_accessor.get(turn_context, default_value_or_factory=lambda: default_data_analysis_info)
+        data_analysis_info = await data_analysis_accessor.get(turn_context, default_value_or_factory=lambda: copy.deepcopy(default_data_analysis_info))
         
         if(data_analysis_info["step_count"] > 0):
             if(data_analysis_info["history"].get("analysis_type") is None):
@@ -284,7 +286,7 @@ async def handle_conversation_logic(turn_context: TurnContext, turn_state: TurnS
     elif user_action['user_action'] == "Report Generation" or (user_action['user_action'] is None and "report generation" in user_text.lower()):
         user_action['user_action'] = "Report Generation"
 
-        data_report_info = await data_report_accessor.get(turn_context, default_value_or_factory=lambda: default_data_report_info)
+        data_report_info = await data_report_accessor.get(turn_context, default_value_or_factory=lambda: copy.deepcopy(default_data_report_info))
 
         if(data_report_info["step_count"] > 0):
             if(data_report_info["history"].get("report_style") is None):
@@ -324,8 +326,59 @@ async def handle_conversation_logic(turn_context: TurnContext, turn_state: TurnS
 
     #print("technically saved state")
 
-AGENT_APP.conversation_update("membersAdded")(handle_conversation_logic)
+#AGENT_APP.conversation_update("membersAdded")(handle_conversation_logic)
 
+async def handle_conversation_reset(turn_context: TurnContext, turn_state: TurnState):
+    """
+    Resets the conversation state and presents the initial selection menu to the user.
+    """
+    print("[PLAYGROUND RESET]: Wiping conversation state...")
+    await conversation_state.load(turn_context)
+
+    # Clear all conversation state properties
+    await user_action_accessor.set(turn_context, copy.deepcopy(default_user_action))
+    await data_collection_accessor.set(turn_context, copy.deepcopy(default_data_collection_info))
+    await data_analysis_accessor.set(turn_context, copy.deepcopy(default_data_analysis_info))
+    await data_report_accessor.set(turn_context, copy.deepcopy(default_data_report_info))
+
+    # Save the cleared state back to persistent storage
+    await conversation_state.save(turn_context)
+
+    # Notify the user that the conversation state has been reset
+    await turn_context.send_activity("🔄 Conversation state has been entirely wiped clean! You can start over.")
+    await turn_context.send_activity(f"/menu to return to main menu, /clear command is available to reset the conversation state at any time.")
+    # Present the initial selection menu to the user
+    await handle_conversation_logic(turn_context, turn_state)
+
+@AGENT_APP.conversation_update("membersAdded")
+async def members_added(turn_context: TurnContext, turn_state: TurnState):
+    """
+    Handles the conversation update event when new members are added to the conversation.
+    This is typically used to reset the conversation state and present the initial selection menu.
+    """
+    # Reset the conversation state for a fresh start
+    #if(conversation_state):
+    #    await conversation_state.clear(turn_context)
+    for member in turn_context.activity.members_added:
+        if member.id != turn_context.activity.recipient.id:
+            await handle_conversation_reset(turn_context, turn_state)
+
+async def handle_return_to_main_menu(turn_context: TurnContext, turn_state: TurnState):
+    """
+    Handles the command to return to the main menu.
+    Resets the conversation state and presents the initial selection menu.
+    """
+    print("[RETURN TO MAIN MENU]: Resetting conversation state...")
+    await conversation_state.load(turn_context)
+
+    await user_action_accessor.set(turn_context, copy.deepcopy(default_user_action))
+
+    await conversation_state.save(turn_context)
+
+    await handle_conversation_logic(turn_context, turn_state)
+
+AGENT_APP.message("/menu")(handle_return_to_main_menu)
+AGENT_APP.message("/clear")(handle_conversation_reset)
 AGENT_APP.message("/other")(_other)
 
 # @AGENT_APP.activity("message")

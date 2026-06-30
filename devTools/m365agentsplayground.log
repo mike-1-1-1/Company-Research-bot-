@@ -6,37 +6,15 @@ debug started web socket client
 debug started web socket client
 log Waiting for connection of endpoint: http://127.0.0.1:3978/api/messages
 log waiting for 1 resources: http://127.0.0.1:3978/api/messages
-log wait-on(56322) complete
+log wait-on(83975) complete
 log Events recording disabled.
 debug Telemetry: agents-playground-server/eventsRecording {"cleanProperties":{"enabled":"false"}}
 
 debug Telemetry: agents-playground-server/getConfig {"cleanProperties":{"internalConfig":"{\"locale\":\"en-US\",\"localTimezone\":\"America/Mexico_City\",\"channelId\":\"msteams\",\"debugConfig\":{\"eventsRecordingEnabled\":false}}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
 debug stopping web socket client
 debug stopping web socket client
@@ -44,27 +22,21 @@ debug started web socket client
 debug started web socket client
 log Waiting for connection of endpoint: http://127.0.0.1:3978/api/messages
 log waiting for 1 resources: http://127.0.0.1:3978/api/messages
-log wait-on(56322) complete
+log wait-on(83975) complete
 log Events recording disabled.
 debug Telemetry: agents-playground-server/eventsRecording {"cleanProperties":{"enabled":"false"}}
 
 debug Telemetry: agents-playground-server/getConfig {"cleanProperties":{"internalConfig":"{\"locale\":\"en-US\",\"localTimezone\":\"America/Mexico_City\",\"channelId\":\"msteams\",\"debugConfig\":{\"eventsRecordingEnabled\":false}}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
 debug stopping web socket client
 debug stopping web socket client
@@ -72,33 +44,15 @@ debug started web socket client
 debug started web socket client
 log Waiting for connection of endpoint: http://127.0.0.1:3978/api/messages
 log waiting for 1 resources: http://127.0.0.1:3978/api/messages
-log wait-on(56322) complete
+log wait-on(83975) complete
 log Events recording disabled.
 debug Telemetry: agents-playground-server/eventsRecording {"cleanProperties":{"enabled":"false"}}
 
 debug Telemetry: agents-playground-server/getConfig {"cleanProperties":{"internalConfig":"{\"locale\":\"en-US\",\"localTimezone\":\"America/Mexico_City\",\"channelId\":\"msteams\",\"debugConfig\":{\"eventsRecordingEnabled\":false}}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
 debug stopping web socket client
 debug stopping web socket client
@@ -106,17 +60,15 @@ debug started web socket client
 debug started web socket client
 log Waiting for connection of endpoint: http://127.0.0.1:3978/api/messages
 log waiting for 1 resources: http://127.0.0.1:3978/api/messages
-log wait-on(56322) complete
+log wait-on(83975) complete
 log Events recording disabled.
 debug Telemetry: agents-playground-server/eventsRecording {"cleanProperties":{"enabled":"false"}}
 
 debug Telemetry: agents-playground-server/getConfig {"cleanProperties":{"internalConfig":"{\"locale\":\"en-US\",\"localTimezone\":\"America/Mexico_City\",\"channelId\":\"msteams\",\"debugConfig\":{\"eventsRecordingEnabled\":false}}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
 debug stopping web socket client
 debug stopping web socket client
@@ -124,15 +76,15 @@ debug started web socket client
 debug started web socket client
 log Waiting for connection of endpoint: http://127.0.0.1:3978/api/messages
 log waiting for 1 resources: http://127.0.0.1:3978/api/messages
-log wait-on(56322) complete
+log wait-on(83975) complete
 log Events recording disabled.
 debug Telemetry: agents-playground-server/eventsRecording {"cleanProperties":{"enabled":"false"}}
 
 debug Telemetry: agents-playground-server/getConfig {"cleanProperties":{"internalConfig":"{\"locale\":\"en-US\",\"localTimezone\":\"America/Mexico_City\",\"channelId\":\"msteams\",\"debugConfig\":{\"eventsRecordingEnabled\":false}}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
 debug stopping web socket client
 debug stopping web socket client
@@ -140,15 +92,15 @@ debug started web socket client
 debug started web socket client
 log Waiting for connection of endpoint: http://127.0.0.1:3978/api/messages
 log waiting for 1 resources: http://127.0.0.1:3978/api/messages
-log wait-on(56322) complete
+log wait-on(83975) complete
 log Events recording disabled.
 debug Telemetry: agents-playground-server/eventsRecording {"cleanProperties":{"enabled":"false"}}
 
 debug Telemetry: agents-playground-server/getConfig {"cleanProperties":{"internalConfig":"{\"locale\":\"en-US\",\"localTimezone\":\"America/Mexico_City\",\"channelId\":\"msteams\",\"debugConfig\":{\"eventsRecordingEnabled\":false}}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
 debug stopping web socket client
 debug stopping web socket client
@@ -156,15 +108,21 @@ debug started web socket client
 debug started web socket client
 log Waiting for connection of endpoint: http://127.0.0.1:3978/api/messages
 log waiting for 1 resources: http://127.0.0.1:3978/api/messages
-log wait-on(56322) complete
+log wait-on(83975) complete
 log Events recording disabled.
 debug Telemetry: agents-playground-server/eventsRecording {"cleanProperties":{"enabled":"false"}}
 
 debug Telemetry: agents-playground-server/getConfig {"cleanProperties":{"internalConfig":"{\"locale\":\"en-US\",\"localTimezone\":\"America/Mexico_City\",\"channelId\":\"msteams\",\"debugConfig\":{\"eventsRecordingEnabled\":false}}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
 debug stopping web socket client
 debug stopping web socket client
@@ -172,17 +130,15 @@ debug started web socket client
 debug started web socket client
 log Waiting for connection of endpoint: http://127.0.0.1:3978/api/messages
 log waiting for 1 resources: http://127.0.0.1:3978/api/messages
-log wait-on(56322) complete
+log wait-on(83975) complete
 log Events recording disabled.
 debug Telemetry: agents-playground-server/eventsRecording {"cleanProperties":{"enabled":"false"}}
 
 debug Telemetry: agents-playground-server/getConfig {"cleanProperties":{"internalConfig":"{\"locale\":\"en-US\",\"localTimezone\":\"America/Mexico_City\",\"channelId\":\"msteams\",\"debugConfig\":{\"eventsRecordingEnabled\":false}}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
 debug stopping web socket client
 debug stopping web socket client
@@ -190,19 +146,21 @@ debug started web socket client
 debug started web socket client
 log Waiting for connection of endpoint: http://127.0.0.1:3978/api/messages
 log waiting for 1 resources: http://127.0.0.1:3978/api/messages
-log wait-on(56322) complete
+log wait-on(83975) complete
 log Events recording disabled.
 debug Telemetry: agents-playground-server/eventsRecording {"cleanProperties":{"enabled":"false"}}
 
 debug Telemetry: agents-playground-server/getConfig {"cleanProperties":{"internalConfig":"{\"locale\":\"en-US\",\"localTimezone\":\"America/Mexico_City\",\"channelId\":\"msteams\",\"debugConfig\":{\"eventsRecordingEnabled\":false}}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
 debug stopping web socket client
 debug stopping web socket client
@@ -210,19 +168,15 @@ debug started web socket client
 debug started web socket client
 log Waiting for connection of endpoint: http://127.0.0.1:3978/api/messages
 log waiting for 1 resources: http://127.0.0.1:3978/api/messages
-log wait-on(56322) complete
+log wait-on(83975) complete
 log Events recording disabled.
 debug Telemetry: agents-playground-server/eventsRecording {"cleanProperties":{"enabled":"false"}}
 
 debug Telemetry: agents-playground-server/getConfig {"cleanProperties":{"internalConfig":"{\"locale\":\"en-US\",\"localTimezone\":\"America/Mexico_City\",\"channelId\":\"msteams\",\"debugConfig\":{\"eventsRecordingEnabled\":false}}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
 debug stopping web socket client
 debug stopping web socket client
@@ -230,17 +184,15 @@ debug started web socket client
 debug started web socket client
 log Waiting for connection of endpoint: http://127.0.0.1:3978/api/messages
 log waiting for 1 resources: http://127.0.0.1:3978/api/messages
-log wait-on(56322) complete
+log wait-on(83975) complete
 log Events recording disabled.
 debug Telemetry: agents-playground-server/eventsRecording {"cleanProperties":{"enabled":"false"}}
 
 debug Telemetry: agents-playground-server/getConfig {"cleanProperties":{"internalConfig":"{\"locale\":\"en-US\",\"localTimezone\":\"America/Mexico_City\",\"channelId\":\"msteams\",\"debugConfig\":{\"eventsRecordingEnabled\":false}}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
 debug stopping web socket client
 debug stopping web socket client
@@ -248,19 +200,15 @@ debug started web socket client
 debug started web socket client
 log Waiting for connection of endpoint: http://127.0.0.1:3978/api/messages
 log waiting for 1 resources: http://127.0.0.1:3978/api/messages
-log wait-on(56322) complete
+log wait-on(83975) complete
 log Events recording disabled.
 debug Telemetry: agents-playground-server/eventsRecording {"cleanProperties":{"enabled":"false"}}
 
 debug Telemetry: agents-playground-server/getConfig {"cleanProperties":{"internalConfig":"{\"locale\":\"en-US\",\"localTimezone\":\"America/Mexico_City\",\"channelId\":\"msteams\",\"debugConfig\":{\"eventsRecordingEnabled\":false}}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
 debug stopping web socket client
 debug stopping web socket client
@@ -268,19 +216,15 @@ debug started web socket client
 debug started web socket client
 log Waiting for connection of endpoint: http://127.0.0.1:3978/api/messages
 log waiting for 1 resources: http://127.0.0.1:3978/api/messages
-log wait-on(56322) complete
+log wait-on(83975) complete
 log Events recording disabled.
 debug Telemetry: agents-playground-server/eventsRecording {"cleanProperties":{"enabled":"false"}}
 
 debug Telemetry: agents-playground-server/getConfig {"cleanProperties":{"internalConfig":"{\"locale\":\"en-US\",\"localTimezone\":\"America/Mexico_City\",\"channelId\":\"msteams\",\"debugConfig\":{\"eventsRecordingEnabled\":false}}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
 debug stopping web socket client
 debug stopping web socket client
@@ -288,23 +232,15 @@ debug started web socket client
 debug started web socket client
 log Waiting for connection of endpoint: http://127.0.0.1:3978/api/messages
 log waiting for 1 resources: http://127.0.0.1:3978/api/messages
-log wait-on(56322) complete
+log wait-on(83975) complete
 log Events recording disabled.
 debug Telemetry: agents-playground-server/eventsRecording {"cleanProperties":{"enabled":"false"}}
 
 debug Telemetry: agents-playground-server/getConfig {"cleanProperties":{"internalConfig":"{\"locale\":\"en-US\",\"localTimezone\":\"America/Mexico_City\",\"channelId\":\"msteams\",\"debugConfig\":{\"eventsRecordingEnabled\":false}}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
 debug stopping web socket client
 debug stopping web socket client
@@ -312,27 +248,21 @@ debug started web socket client
 debug started web socket client
 log Waiting for connection of endpoint: http://127.0.0.1:3978/api/messages
 log waiting for 1 resources: http://127.0.0.1:3978/api/messages
-log wait-on(56322) complete
+log wait-on(83975) complete
 log Events recording disabled.
 debug Telemetry: agents-playground-server/eventsRecording {"cleanProperties":{"enabled":"false"}}
 
 debug Telemetry: agents-playground-server/getConfig {"cleanProperties":{"internalConfig":"{\"locale\":\"en-US\",\"localTimezone\":\"America/Mexico_City\",\"channelId\":\"msteams\",\"debugConfig\":{\"eventsRecordingEnabled\":false}}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
 debug stopping web socket client
 debug stopping web socket client
@@ -340,17 +270,15 @@ debug started web socket client
 debug started web socket client
 log Waiting for connection of endpoint: http://127.0.0.1:3978/api/messages
 log waiting for 1 resources: http://127.0.0.1:3978/api/messages
-log wait-on(56322) complete
+log wait-on(83975) complete
 log Events recording disabled.
 debug Telemetry: agents-playground-server/eventsRecording {"cleanProperties":{"enabled":"false"}}
 
 debug Telemetry: agents-playground-server/getConfig {"cleanProperties":{"internalConfig":"{\"locale\":\"en-US\",\"localTimezone\":\"America/Mexico_City\",\"channelId\":\"msteams\",\"debugConfig\":{\"eventsRecordingEnabled\":false}}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
 debug stopping web socket client
 debug stopping web socket client
@@ -358,21 +286,21 @@ debug started web socket client
 debug started web socket client
 log Waiting for connection of endpoint: http://127.0.0.1:3978/api/messages
 log waiting for 1 resources: http://127.0.0.1:3978/api/messages
-log wait-on(56322) complete
+log wait-on(83975) complete
 log Events recording disabled.
 debug Telemetry: agents-playground-server/eventsRecording {"cleanProperties":{"enabled":"false"}}
 
 debug Telemetry: agents-playground-server/getConfig {"cleanProperties":{"internalConfig":"{\"locale\":\"en-US\",\"localTimezone\":\"America/Mexico_City\",\"channelId\":\"msteams\",\"debugConfig\":{\"eventsRecordingEnabled\":false}}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
 debug stopping web socket client
 debug stopping web socket client
@@ -380,25 +308,15 @@ debug started web socket client
 debug started web socket client
 log Waiting for connection of endpoint: http://127.0.0.1:3978/api/messages
 log waiting for 1 resources: http://127.0.0.1:3978/api/messages
-log wait-on(56322) complete
+log wait-on(83975) complete
 log Events recording disabled.
 debug Telemetry: agents-playground-server/eventsRecording {"cleanProperties":{"enabled":"false"}}
 
 debug Telemetry: agents-playground-server/getConfig {"cleanProperties":{"internalConfig":"{\"locale\":\"en-US\",\"localTimezone\":\"America/Mexico_City\",\"channelId\":\"msteams\",\"debugConfig\":{\"eventsRecordingEnabled\":false}}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
 debug stopping web socket client
 debug stopping web socket client
@@ -406,23 +324,15 @@ debug started web socket client
 debug started web socket client
 log Waiting for connection of endpoint: http://127.0.0.1:3978/api/messages
 log waiting for 1 resources: http://127.0.0.1:3978/api/messages
-log wait-on(56322) complete
+log wait-on(83975) complete
 log Events recording disabled.
 debug Telemetry: agents-playground-server/eventsRecording {"cleanProperties":{"enabled":"false"}}
 
 debug Telemetry: agents-playground-server/getConfig {"cleanProperties":{"internalConfig":"{\"locale\":\"en-US\",\"localTimezone\":\"America/Mexico_City\",\"channelId\":\"msteams\",\"debugConfig\":{\"eventsRecordingEnabled\":false}}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
 debug stopping web socket client
 debug stopping web socket client
@@ -430,21 +340,21 @@ debug started web socket client
 debug started web socket client
 log Waiting for connection of endpoint: http://127.0.0.1:3978/api/messages
 log waiting for 1 resources: http://127.0.0.1:3978/api/messages
-log wait-on(56322) complete
+log wait-on(83975) complete
 log Events recording disabled.
 debug Telemetry: agents-playground-server/eventsRecording {"cleanProperties":{"enabled":"false"}}
 
 debug Telemetry: agents-playground-server/getConfig {"cleanProperties":{"internalConfig":"{\"locale\":\"en-US\",\"localTimezone\":\"America/Mexico_City\",\"channelId\":\"msteams\",\"debugConfig\":{\"eventsRecordingEnabled\":false}}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
 debug stopping web socket client
 debug stopping web socket client
@@ -452,25 +362,15 @@ debug started web socket client
 debug started web socket client
 log Waiting for connection of endpoint: http://127.0.0.1:3978/api/messages
 log waiting for 1 resources: http://127.0.0.1:3978/api/messages
-log wait-on(56322) complete
+log wait-on(83975) complete
 log Events recording disabled.
 debug Telemetry: agents-playground-server/eventsRecording {"cleanProperties":{"enabled":"false"}}
 
 debug Telemetry: agents-playground-server/getConfig {"cleanProperties":{"internalConfig":"{\"locale\":\"en-US\",\"localTimezone\":\"America/Mexico_City\",\"channelId\":\"msteams\",\"debugConfig\":{\"eventsRecordingEnabled\":false}}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
 debug stopping web socket client
 debug stopping web socket client
@@ -478,15 +378,19 @@ debug started web socket client
 debug started web socket client
 log Waiting for connection of endpoint: http://127.0.0.1:3978/api/messages
 log waiting for 1 resources: http://127.0.0.1:3978/api/messages
-log wait-on(56322) complete
+log wait-on(83975) complete
 log Events recording disabled.
 debug Telemetry: agents-playground-server/eventsRecording {"cleanProperties":{"enabled":"false"}}
 
 debug Telemetry: agents-playground-server/getConfig {"cleanProperties":{"internalConfig":"{\"locale\":\"en-US\",\"localTimezone\":\"America/Mexico_City\",\"channelId\":\"msteams\",\"debugConfig\":{\"eventsRecordingEnabled\":false}}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
 debug stopping web socket client
 debug stopping web socket client
@@ -494,15 +398,15 @@ debug started web socket client
 debug started web socket client
 log Waiting for connection of endpoint: http://127.0.0.1:3978/api/messages
 log waiting for 1 resources: http://127.0.0.1:3978/api/messages
-log wait-on(56322) complete
+log wait-on(83975) complete
 log Events recording disabled.
 debug Telemetry: agents-playground-server/eventsRecording {"cleanProperties":{"enabled":"false"}}
 
 debug Telemetry: agents-playground-server/getConfig {"cleanProperties":{"internalConfig":"{\"locale\":\"en-US\",\"localTimezone\":\"America/Mexico_City\",\"channelId\":\"msteams\",\"debugConfig\":{\"eventsRecordingEnabled\":false}}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
 debug stopping web socket client
 debug stopping web socket client
@@ -510,23 +414,21 @@ debug started web socket client
 debug started web socket client
 log Waiting for connection of endpoint: http://127.0.0.1:3978/api/messages
 log waiting for 1 resources: http://127.0.0.1:3978/api/messages
-log wait-on(56322) complete
+log wait-on(83975) complete
 log Events recording disabled.
 debug Telemetry: agents-playground-server/eventsRecording {"cleanProperties":{"enabled":"false"}}
 
 debug Telemetry: agents-playground-server/getConfig {"cleanProperties":{"internalConfig":"{\"locale\":\"en-US\",\"localTimezone\":\"America/Mexico_City\",\"channelId\":\"msteams\",\"debugConfig\":{\"eventsRecordingEnabled\":false}}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
 debug stopping web socket client
 debug stopping web socket client
@@ -534,19 +436,15 @@ debug started web socket client
 debug started web socket client
 log Waiting for connection of endpoint: http://127.0.0.1:3978/api/messages
 log waiting for 1 resources: http://127.0.0.1:3978/api/messages
-log wait-on(56322) complete
+log wait-on(83975) complete
 log Events recording disabled.
 debug Telemetry: agents-playground-server/eventsRecording {"cleanProperties":{"enabled":"false"}}
 
 debug Telemetry: agents-playground-server/getConfig {"cleanProperties":{"internalConfig":"{\"locale\":\"en-US\",\"localTimezone\":\"America/Mexico_City\",\"channelId\":\"msteams\",\"debugConfig\":{\"eventsRecordingEnabled\":false}}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
 debug stopping web socket client
 debug stopping web socket client
@@ -554,23 +452,19 @@ debug started web socket client
 debug started web socket client
 log Waiting for connection of endpoint: http://127.0.0.1:3978/api/messages
 log waiting for 1 resources: http://127.0.0.1:3978/api/messages
-log wait-on(56322) complete
+log wait-on(83975) complete
 log Events recording disabled.
 debug Telemetry: agents-playground-server/eventsRecording {"cleanProperties":{"enabled":"false"}}
 
 debug Telemetry: agents-playground-server/getConfig {"cleanProperties":{"internalConfig":"{\"locale\":\"en-US\",\"localTimezone\":\"America/Mexico_City\",\"channelId\":\"msteams\",\"debugConfig\":{\"eventsRecordingEnabled\":false}}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
 debug stopping web socket client
 debug stopping web socket client
@@ -578,15 +472,15 @@ debug started web socket client
 debug started web socket client
 log Waiting for connection of endpoint: http://127.0.0.1:3978/api/messages
 log waiting for 1 resources: http://127.0.0.1:3978/api/messages
-log wait-on(56322) complete
+log wait-on(83975) complete
 log Events recording disabled.
 debug Telemetry: agents-playground-server/eventsRecording {"cleanProperties":{"enabled":"false"}}
 
 debug Telemetry: agents-playground-server/getConfig {"cleanProperties":{"internalConfig":"{\"locale\":\"en-US\",\"localTimezone\":\"America/Mexico_City\",\"channelId\":\"msteams\",\"debugConfig\":{\"eventsRecordingEnabled\":false}}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
 debug stopping web socket client
 debug stopping web socket client
@@ -594,23 +488,15 @@ debug started web socket client
 debug started web socket client
 log Waiting for connection of endpoint: http://127.0.0.1:3978/api/messages
 log waiting for 1 resources: http://127.0.0.1:3978/api/messages
-log wait-on(56322) complete
+log wait-on(83975) complete
 log Events recording disabled.
 debug Telemetry: agents-playground-server/eventsRecording {"cleanProperties":{"enabled":"false"}}
 
 debug Telemetry: agents-playground-server/getConfig {"cleanProperties":{"internalConfig":"{\"locale\":\"en-US\",\"localTimezone\":\"America/Mexico_City\",\"channelId\":\"msteams\",\"debugConfig\":{\"eventsRecordingEnabled\":false}}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
 debug stopping web socket client
 debug stopping web socket client
@@ -618,15 +504,19 @@ debug started web socket client
 debug started web socket client
 log Waiting for connection of endpoint: http://127.0.0.1:3978/api/messages
 log waiting for 1 resources: http://127.0.0.1:3978/api/messages
-log wait-on(56322) complete
+log wait-on(83975) complete
 log Events recording disabled.
 debug Telemetry: agents-playground-server/eventsRecording {"cleanProperties":{"enabled":"false"}}
 
 debug Telemetry: agents-playground-server/getConfig {"cleanProperties":{"internalConfig":"{\"locale\":\"en-US\",\"localTimezone\":\"America/Mexico_City\",\"channelId\":\"msteams\",\"debugConfig\":{\"eventsRecordingEnabled\":false}}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
 debug stopping web socket client
 debug stopping web socket client
@@ -634,21 +524,15 @@ debug started web socket client
 debug started web socket client
 log Waiting for connection of endpoint: http://127.0.0.1:3978/api/messages
 log waiting for 1 resources: http://127.0.0.1:3978/api/messages
-log wait-on(56322) complete
+log wait-on(83975) complete
 log Events recording disabled.
 debug Telemetry: agents-playground-server/eventsRecording {"cleanProperties":{"enabled":"false"}}
 
 debug Telemetry: agents-playground-server/getConfig {"cleanProperties":{"internalConfig":"{\"locale\":\"en-US\",\"localTimezone\":\"America/Mexico_City\",\"channelId\":\"msteams\",\"debugConfig\":{\"eventsRecordingEnabled\":false}}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
 debug stopping web socket client
 debug stopping web socket client
@@ -656,21 +540,15 @@ debug started web socket client
 debug started web socket client
 log Waiting for connection of endpoint: http://127.0.0.1:3978/api/messages
 log waiting for 1 resources: http://127.0.0.1:3978/api/messages
-log wait-on(56322) complete
+log wait-on(83975) complete
 log Events recording disabled.
 debug Telemetry: agents-playground-server/eventsRecording {"cleanProperties":{"enabled":"false"}}
 
 debug Telemetry: agents-playground-server/getConfig {"cleanProperties":{"internalConfig":"{\"locale\":\"en-US\",\"localTimezone\":\"America/Mexico_City\",\"channelId\":\"msteams\",\"debugConfig\":{\"eventsRecordingEnabled\":false}}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
 debug stopping web socket client
 debug stopping web socket client
@@ -678,15 +556,21 @@ debug started web socket client
 debug started web socket client
 log Waiting for connection of endpoint: http://127.0.0.1:3978/api/messages
 log waiting for 1 resources: http://127.0.0.1:3978/api/messages
-log wait-on(56322) complete
+log wait-on(83975) complete
 log Events recording disabled.
 debug Telemetry: agents-playground-server/eventsRecording {"cleanProperties":{"enabled":"false"}}
 
 debug Telemetry: agents-playground-server/getConfig {"cleanProperties":{"internalConfig":"{\"locale\":\"en-US\",\"localTimezone\":\"America/Mexico_City\",\"channelId\":\"msteams\",\"debugConfig\":{\"eventsRecordingEnabled\":false}}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
 debug stopping web socket client
 debug stopping web socket client
@@ -694,21 +578,15 @@ debug started web socket client
 debug started web socket client
 log Waiting for connection of endpoint: http://127.0.0.1:3978/api/messages
 log waiting for 1 resources: http://127.0.0.1:3978/api/messages
-log wait-on(56322) complete
+log wait-on(83975) complete
 log Events recording disabled.
 debug Telemetry: agents-playground-server/eventsRecording {"cleanProperties":{"enabled":"false"}}
 
 debug Telemetry: agents-playground-server/getConfig {"cleanProperties":{"internalConfig":"{\"locale\":\"en-US\",\"localTimezone\":\"America/Mexico_City\",\"channelId\":\"msteams\",\"debugConfig\":{\"eventsRecordingEnabled\":false}}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
 debug stopping web socket client
 debug stopping web socket client
@@ -716,21 +594,21 @@ debug started web socket client
 debug started web socket client
 log Waiting for connection of endpoint: http://127.0.0.1:3978/api/messages
 log waiting for 1 resources: http://127.0.0.1:3978/api/messages
-log wait-on(56322) complete
+log wait-on(83975) complete
 log Events recording disabled.
 debug Telemetry: agents-playground-server/eventsRecording {"cleanProperties":{"enabled":"false"}}
 
 debug Telemetry: agents-playground-server/getConfig {"cleanProperties":{"internalConfig":"{\"locale\":\"en-US\",\"localTimezone\":\"America/Mexico_City\",\"channelId\":\"msteams\",\"debugConfig\":{\"eventsRecordingEnabled\":false}}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
 debug stopping web socket client
 debug stopping web socket client
@@ -738,19 +616,15 @@ debug started web socket client
 debug started web socket client
 log Waiting for connection of endpoint: http://127.0.0.1:3978/api/messages
 log waiting for 1 resources: http://127.0.0.1:3978/api/messages
-log wait-on(56322) complete
+log wait-on(83975) complete
 log Events recording disabled.
 debug Telemetry: agents-playground-server/eventsRecording {"cleanProperties":{"enabled":"false"}}
 
 debug Telemetry: agents-playground-server/getConfig {"cleanProperties":{"internalConfig":"{\"locale\":\"en-US\",\"localTimezone\":\"America/Mexico_City\",\"channelId\":\"msteams\",\"debugConfig\":{\"eventsRecordingEnabled\":false}}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
 debug stopping web socket client
 debug stopping web socket client
@@ -758,19 +632,15 @@ debug started web socket client
 debug started web socket client
 log Waiting for connection of endpoint: http://127.0.0.1:3978/api/messages
 log waiting for 1 resources: http://127.0.0.1:3978/api/messages
-log wait-on(56322) complete
+log wait-on(83975) complete
 log Events recording disabled.
 debug Telemetry: agents-playground-server/eventsRecording {"cleanProperties":{"enabled":"false"}}
 
 debug Telemetry: agents-playground-server/getConfig {"cleanProperties":{"internalConfig":"{\"locale\":\"en-US\",\"localTimezone\":\"America/Mexico_City\",\"channelId\":\"msteams\",\"debugConfig\":{\"eventsRecordingEnabled\":false}}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
 debug stopping web socket client
 debug stopping web socket client
@@ -778,17 +648,19 @@ debug started web socket client
 debug started web socket client
 log Waiting for connection of endpoint: http://127.0.0.1:3978/api/messages
 log waiting for 1 resources: http://127.0.0.1:3978/api/messages
-log wait-on(56322) complete
+log wait-on(83975) complete
 log Events recording disabled.
 debug Telemetry: agents-playground-server/eventsRecording {"cleanProperties":{"enabled":"false"}}
 
 debug Telemetry: agents-playground-server/getConfig {"cleanProperties":{"internalConfig":"{\"locale\":\"en-US\",\"localTimezone\":\"America/Mexico_City\",\"channelId\":\"msteams\",\"debugConfig\":{\"eventsRecordingEnabled\":false}}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
 debug stopping web socket client
 debug stopping web socket client
@@ -796,19 +668,15 @@ debug started web socket client
 debug started web socket client
 log Waiting for connection of endpoint: http://127.0.0.1:3978/api/messages
 log waiting for 1 resources: http://127.0.0.1:3978/api/messages
-log wait-on(56322) complete
+log wait-on(83975) complete
 log Events recording disabled.
 debug Telemetry: agents-playground-server/eventsRecording {"cleanProperties":{"enabled":"false"}}
 
 debug Telemetry: agents-playground-server/getConfig {"cleanProperties":{"internalConfig":"{\"locale\":\"en-US\",\"localTimezone\":\"America/Mexico_City\",\"channelId\":\"msteams\",\"debugConfig\":{\"eventsRecordingEnabled\":false}}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
 debug stopping web socket client
 debug stopping web socket client
@@ -816,19 +684,15 @@ debug started web socket client
 debug started web socket client
 log Waiting for connection of endpoint: http://127.0.0.1:3978/api/messages
 log waiting for 1 resources: http://127.0.0.1:3978/api/messages
-log wait-on(56322) complete
+log wait-on(83975) complete
 log Events recording disabled.
 debug Telemetry: agents-playground-server/eventsRecording {"cleanProperties":{"enabled":"false"}}
 
 debug Telemetry: agents-playground-server/getConfig {"cleanProperties":{"internalConfig":"{\"locale\":\"en-US\",\"localTimezone\":\"America/Mexico_City\",\"channelId\":\"msteams\",\"debugConfig\":{\"eventsRecordingEnabled\":false}}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
 debug stopping web socket client
 debug stopping web socket client
@@ -836,19 +700,15 @@ debug started web socket client
 debug started web socket client
 log Waiting for connection of endpoint: http://127.0.0.1:3978/api/messages
 log waiting for 1 resources: http://127.0.0.1:3978/api/messages
-log wait-on(56322) complete
+log wait-on(83975) complete
 log Events recording disabled.
 debug Telemetry: agents-playground-server/eventsRecording {"cleanProperties":{"enabled":"false"}}
 
 debug Telemetry: agents-playground-server/getConfig {"cleanProperties":{"internalConfig":"{\"locale\":\"en-US\",\"localTimezone\":\"America/Mexico_City\",\"channelId\":\"msteams\",\"debugConfig\":{\"eventsRecordingEnabled\":false}}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
 debug stopping web socket client
 debug stopping web socket client
@@ -856,19 +716,21 @@ debug started web socket client
 debug started web socket client
 log Waiting for connection of endpoint: http://127.0.0.1:3978/api/messages
 log waiting for 1 resources: http://127.0.0.1:3978/api/messages
-log wait-on(56322) complete
+log wait-on(83975) complete
 log Events recording disabled.
 debug Telemetry: agents-playground-server/eventsRecording {"cleanProperties":{"enabled":"false"}}
 
 debug Telemetry: agents-playground-server/getConfig {"cleanProperties":{"internalConfig":"{\"locale\":\"en-US\",\"localTimezone\":\"America/Mexico_City\",\"channelId\":\"msteams\",\"debugConfig\":{\"eventsRecordingEnabled\":false}}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
 debug stopping web socket client
 debug stopping web socket client
@@ -876,21 +738,25 @@ debug started web socket client
 debug started web socket client
 log Waiting for connection of endpoint: http://127.0.0.1:3978/api/messages
 log waiting for 1 resources: http://127.0.0.1:3978/api/messages
-log wait-on(56322) complete
+log wait-on(83975) complete
 log Events recording disabled.
 debug Telemetry: agents-playground-server/eventsRecording {"cleanProperties":{"enabled":"false"}}
 
 debug Telemetry: agents-playground-server/getConfig {"cleanProperties":{"internalConfig":"{\"locale\":\"en-US\",\"localTimezone\":\"America/Mexico_City\",\"channelId\":\"msteams\",\"debugConfig\":{\"eventsRecordingEnabled\":false}}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
 debug stopping web socket client
 debug stopping web socket client
@@ -898,15 +764,21 @@ debug started web socket client
 debug started web socket client
 log Waiting for connection of endpoint: http://127.0.0.1:3978/api/messages
 log waiting for 1 resources: http://127.0.0.1:3978/api/messages
-log wait-on(56322) complete
+log wait-on(83975) complete
 log Events recording disabled.
 debug Telemetry: agents-playground-server/eventsRecording {"cleanProperties":{"enabled":"false"}}
 
 debug Telemetry: agents-playground-server/getConfig {"cleanProperties":{"internalConfig":"{\"locale\":\"en-US\",\"localTimezone\":\"America/Mexico_City\",\"channelId\":\"msteams\",\"debugConfig\":{\"eventsRecordingEnabled\":false}}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
 debug stopping web socket client
 debug stopping web socket client
@@ -914,29 +786,21 @@ debug started web socket client
 debug started web socket client
 log Waiting for connection of endpoint: http://127.0.0.1:3978/api/messages
 log waiting for 1 resources: http://127.0.0.1:3978/api/messages
-log wait-on(56322) complete
+log wait-on(83975) complete
 log Events recording disabled.
 debug Telemetry: agents-playground-server/eventsRecording {"cleanProperties":{"enabled":"false"}}
 
 debug Telemetry: agents-playground-server/getConfig {"cleanProperties":{"internalConfig":"{\"locale\":\"en-US\",\"localTimezone\":\"America/Mexico_City\",\"channelId\":\"msteams\",\"debugConfig\":{\"eventsRecordingEnabled\":false}}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
 debug stopping web socket client
 debug stopping web socket client
@@ -944,19 +808,21 @@ debug started web socket client
 debug started web socket client
 log Waiting for connection of endpoint: http://127.0.0.1:3978/api/messages
 log waiting for 1 resources: http://127.0.0.1:3978/api/messages
-log wait-on(56322) complete
+log wait-on(83975) complete
 log Events recording disabled.
 debug Telemetry: agents-playground-server/eventsRecording {"cleanProperties":{"enabled":"false"}}
 
 debug Telemetry: agents-playground-server/getConfig {"cleanProperties":{"internalConfig":"{\"locale\":\"en-US\",\"localTimezone\":\"America/Mexico_City\",\"channelId\":\"msteams\",\"debugConfig\":{\"eventsRecordingEnabled\":false}}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
 debug stopping web socket client
 debug stopping web socket client
@@ -964,19 +830,23 @@ debug started web socket client
 debug started web socket client
 log Waiting for connection of endpoint: http://127.0.0.1:3978/api/messages
 log waiting for 1 resources: http://127.0.0.1:3978/api/messages
-log wait-on(56322) complete
+log wait-on(83975) complete
 log Events recording disabled.
 debug Telemetry: agents-playground-server/eventsRecording {"cleanProperties":{"enabled":"false"}}
 
 debug Telemetry: agents-playground-server/getConfig {"cleanProperties":{"internalConfig":"{\"locale\":\"en-US\",\"localTimezone\":\"America/Mexico_City\",\"channelId\":\"msteams\",\"debugConfig\":{\"eventsRecordingEnabled\":false}}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
 debug stopping web socket client
 debug stopping web socket client
@@ -984,19 +854,45 @@ debug started web socket client
 debug started web socket client
 log Waiting for connection of endpoint: http://127.0.0.1:3978/api/messages
 log waiting for 1 resources: http://127.0.0.1:3978/api/messages
-log wait-on(56322) complete
+log wait-on(83975) complete
 log Events recording disabled.
 debug Telemetry: agents-playground-server/eventsRecording {"cleanProperties":{"enabled":"false"}}
 
 debug Telemetry: agents-playground-server/getConfig {"cleanProperties":{"internalConfig":"{\"locale\":\"en-US\",\"localTimezone\":\"America/Mexico_City\",\"channelId\":\"msteams\",\"debugConfig\":{\"eventsRecordingEnabled\":false}}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
 debug stopping web socket client
 debug stopping web socket client
@@ -1004,15 +900,19 @@ debug started web socket client
 debug started web socket client
 log Waiting for connection of endpoint: http://127.0.0.1:3978/api/messages
 log waiting for 1 resources: http://127.0.0.1:3978/api/messages
-log wait-on(56322) complete
+log wait-on(83975) complete
 log Events recording disabled.
 debug Telemetry: agents-playground-server/eventsRecording {"cleanProperties":{"enabled":"false"}}
 
 debug Telemetry: agents-playground-server/getConfig {"cleanProperties":{"internalConfig":"{\"locale\":\"en-US\",\"localTimezone\":\"America/Mexico_City\",\"channelId\":\"msteams\",\"debugConfig\":{\"eventsRecordingEnabled\":false}}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
 debug stopping web socket client
 debug stopping web socket client
@@ -1020,21 +920,37 @@ debug started web socket client
 debug started web socket client
 log Waiting for connection of endpoint: http://127.0.0.1:3978/api/messages
 log waiting for 1 resources: http://127.0.0.1:3978/api/messages
-log wait-on(56322) complete
+log wait-on(83975) complete
 log Events recording disabled.
 debug Telemetry: agents-playground-server/eventsRecording {"cleanProperties":{"enabled":"false"}}
 
 debug Telemetry: agents-playground-server/getConfig {"cleanProperties":{"internalConfig":"{\"locale\":\"en-US\",\"localTimezone\":\"America/Mexico_City\",\"channelId\":\"msteams\",\"debugConfig\":{\"eventsRecordingEnabled\":false}}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
 debug stopping web socket client
 debug stopping web socket client
@@ -1042,19 +958,23 @@ debug started web socket client
 debug started web socket client
 log Waiting for connection of endpoint: http://127.0.0.1:3978/api/messages
 log waiting for 1 resources: http://127.0.0.1:3978/api/messages
-log wait-on(56322) complete
+log wait-on(83975) complete
 log Events recording disabled.
 debug Telemetry: agents-playground-server/eventsRecording {"cleanProperties":{"enabled":"false"}}
 
 debug Telemetry: agents-playground-server/getConfig {"cleanProperties":{"internalConfig":"{\"locale\":\"en-US\",\"localTimezone\":\"America/Mexico_City\",\"channelId\":\"msteams\",\"debugConfig\":{\"eventsRecordingEnabled\":false}}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
 debug stopping web socket client
 debug stopping web socket client
@@ -1062,81 +982,35 @@ debug started web socket client
 debug started web socket client
 log Waiting for connection of endpoint: http://127.0.0.1:3978/api/messages
 log waiting for 1 resources: http://127.0.0.1:3978/api/messages
-log wait-on(56322) complete
+log wait-on(83975) complete
 log Events recording disabled.
 debug Telemetry: agents-playground-server/eventsRecording {"cleanProperties":{"enabled":"false"}}
 
 debug Telemetry: agents-playground-server/getConfig {"cleanProperties":{"internalConfig":"{\"locale\":\"en-US\",\"localTimezone\":\"America/Mexico_City\",\"channelId\":\"msteams\",\"debugConfig\":{\"eventsRecordingEnabled\":false}}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug stopping web socket client
-debug stopping web socket client
-debug started web socket client
-debug started web socket client
-log Waiting for connection of endpoint: http://127.0.0.1:3978/api/messages
-log waiting for 1 resources: http://127.0.0.1:3978/api/messages
-log wait-on(56322) complete
-log Events recording disabled.
-debug Telemetry: agents-playground-server/eventsRecording {"cleanProperties":{"enabled":"false"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/getConfig {"cleanProperties":{"internalConfig":"{\"locale\":\"en-US\",\"localTimezone\":\"America/Mexico_City\",\"channelId\":\"msteams\",\"debugConfig\":{\"eventsRecordingEnabled\":false}}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug stopping web socket client
-debug stopping web socket client
-debug started web socket client
-debug started web socket client
-log Waiting for connection of endpoint: http://127.0.0.1:3978/api/messages
-log waiting for 1 resources: http://127.0.0.1:3978/api/messages
-log wait-on(56322) complete
-log Events recording disabled.
-debug Telemetry: agents-playground-server/eventsRecording {"cleanProperties":{"enabled":"false"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/getConfig {"cleanProperties":{"internalConfig":"{\"locale\":\"en-US\",\"localTimezone\":\"America/Mexico_City\",\"channelId\":\"msteams\",\"debugConfig\":{\"eventsRecordingEnabled\":false}}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug stopping web socket client
-debug stopping web socket client
-debug started web socket client
-debug started web socket client
-log Waiting for connection of endpoint: http://127.0.0.1:3978/api/messages
-log waiting for 1 resources: http://127.0.0.1:3978/api/messages
-log wait-on(56322) complete
-log Events recording disabled.
-debug Telemetry: agents-playground-server/eventsRecording {"cleanProperties":{"enabled":"false"}}
-
-debug Telemetry: agents-playground-server/getConfig {"cleanProperties":{"internalConfig":"{\"locale\":\"en-US\",\"localTimezone\":\"America/Mexico_City\",\"channelId\":\"msteams\",\"debugConfig\":{\"eventsRecordingEnabled\":false}}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"3995b7fb-96e4-4aed-b030-6b136fc1f0b3","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"b77be5f5-23ba-4745-901f-ac64ff67a7d4","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
