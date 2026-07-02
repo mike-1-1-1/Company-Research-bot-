@@ -1,4 +1,5 @@
 # app.py
+from dotenv import load_dotenv
 from microsoft_agents.hosting.core import (
    AgentApplication,
    TurnState,
@@ -7,13 +8,18 @@ from microsoft_agents.hosting.core import (
    ConversationState
 )
 from microsoft_agents.hosting.aiohttp import CloudAdapter
+from agent_core.company_research_agent import CompanyResearchAgent
 from start_server import start_server
+
+import os
 
 from collections.abc import Awaitable, Callable
 
 from microsoft_agents.activity import Activity, ActivityTypes, SuggestedActions, CardAction
 
 import copy
+
+import asyncio
 
 def generate_selection_menu() -> Activity:
     """
@@ -105,9 +111,16 @@ data_report_accessor = conversation_state.create_property("data_report_accessor"
 
 default_user_action = {"user_action": None}
 
-default_data_collection_info = {"step": "ask company name", "history": {}, "ai_response": None, "step_count" : 0}
-default_data_analysis_info = {"step": "ask analysis type", "history": {}, "ai_response": None, "step_count" : 0}
-default_data_report_info = {"step": "ask report style", "history": {}, "ai_response": None, "step_count" : 0}
+default_data_collection_info = {"step": "ask company name", "history": {}, "ai_responses": [], "step_count" : 0}
+default_data_analysis_info = {"step": "ask analysis type", "history": {}, "ai_responses": [], "step_count" : 0}
+default_data_report_info = {"step": "ask report style", "history": {}, "ai_responses": [], "step_count" : 0}
+
+max_data_collection_responses_stored = 3
+max_data_analysis_responses_stored = 3
+max_data_report_responses_stored = 3
+
+load_dotenv()
+agent_core = CompanyResearchAgent(name="CompanyCoreResearchAgent", config={"OPEN_AI_API_KEY": os.getenv("OPEN_AI_API_KEY")})
 
 class InputInterceptorMiddleware:
     async def on_turn(
@@ -137,13 +150,17 @@ class InputInterceptorMiddleware:
                 data_collection_info = await data_collection_accessor.get(turn_context, default_value_or_factory=lambda: copy.deepcopy(default_data_collection_info))
                 if(data_collection_info["step"] == "ask company name"):
                     #TODO: validate with ai if the company exists
-                    pass
+                    if not agent_core.does_company_name_probably_exist(user_raw_input):
+                        await turn_context.send_activity(f"The company name '{user_raw_input}' does not seem to exist. Please enter a valid company name.")
+                        return # Stops execution entirely; never calls next_turn()
                 elif(data_collection_info["step"] == "ask company topic"):
                     #no validation for now, but could validate if the topic is relevant to the company
                     pass
                 elif(data_collection_info["step"] == "ask timeframe"):
                     #TODO: validate with ai if the timeframe is a valid timeframe (e.g., "last 5 years", "Q1 2023", etc.)
-                    pass
+                    if not agent_core.is_time_frame_valid(user_raw_input):
+                        await turn_context.send_activity(f"The time frame '{user_raw_input}' is not valid. Please enter a valid time frame. (such as 'last 5 years', 'Q1 2023', etc.)")
+                        return # Stops execution entirely; never calls next_turn()
             elif(user_action['user_action'] == "Data Analysis"):
                 data_analysis_info = await data_analysis_accessor.get(turn_context, default_value_or_factory=lambda: copy.deepcopy(default_data_analysis_info))
                 if(data_analysis_info["step"] == "ask analysis type"):
@@ -224,6 +241,8 @@ async def handle_conversation_logic(turn_context: TurnContext, turn_state: TurnS
         # assume for now company name would be provided (would need to validate with AI model probably)
         #print(f"(1) Step Count: {data_collection_info['step_count']}, Current Step: {data_collection_info['step']}, User Input: {user_text}")
 
+        print(f"Step Count: {data_collection_info['step_count']}, Current Step: {data_collection_info['step']}, User Input: {user_text}")
+
         if(data_collection_info["step_count"] > 0):
             if(data_collection_info["history"].get("company_name") is None):
                 # save the company name to the data collection state history
@@ -236,8 +255,12 @@ async def handle_conversation_logic(turn_context: TurnContext, turn_state: TurnS
             elif(data_collection_info["history"].get("timeframe") is None):
                 # save the timeframe to the data collection state history
                 data_collection_info["history"]["timeframe"] = user_text
+                await turn_context.send_activity("⏳ Collecting data from AI model...")
+                # TODO(1): encapsulate appending and trimming the ai_responses list into a function
+                data_collection_info["ai_responses"].append(agent_core.get_company_info(data_collection_info["history"]["company_name"], data_collection_info["history"]["company_topic"], data_collection_info["history"]["timeframe"]))
+                if(len(data_collection_info["ai_responses"])>max_data_collection_responses_stored):
+                    data_collection_info["ai_responses"] = data_collection_info["ai_responses"][-max_data_collection_responses_stored:] # keep only the last 5 responses
                 data_collection_info["step"] = "complete"
-                #data_collection_info["ai_response"] = "Data collection complete."
 
         data_collection_info["step_count"] += 1
 
@@ -254,7 +277,7 @@ async def handle_conversation_logic(turn_context: TurnContext, turn_state: TurnS
             if("timeframe" not in data_collection_info["history"]):
                 await turn_context.send_activity("Please enter the timeframe you want to research. (Must be 2-100 characters)")
         elif data_collection_info["step"] == "complete":
-            await turn_context.send_activity(f"would technically research {data_collection_info['history']['company_name']} on the topic of {data_collection_info['history']['company_topic']} for the timeframe of {data_collection_info['history']['timeframe']}.")
+            await turn_context.send_activity(f"✅ Data Collection Complete! Here's a brief summary of the company '{data_collection_info['history']['company_name']}' focusing on '{data_collection_info['history']['company_topic']}' within the timeframe of '{data_collection_info['history']['timeframe']}':\n\n{data_collection_info['ai_responses'][-1]}")
         # Trigger your data collection modules here
 
         # Update the local state cache with the modified dict properties
@@ -270,6 +293,12 @@ async def handle_conversation_logic(turn_context: TurnContext, turn_state: TurnS
                 # save the analysis type to the task state history
                 data_analysis_info["history"]["analysis_type"] = user_text
                 data_analysis_info["step"] = "complete"
+                # TODO(1): encapsulate appending and trimming the ai_responses list into a function
+                await turn_context.send_activity("⏳ Performing data analysis with AI model...")
+                data_collection_info = await data_collection_accessor.get(turn_context, default_value_or_factory=lambda: copy.deepcopy(default_data_collection_info))
+                data_analysis_info["ai_responses"].append(agent_core.do_analysis_on_data_collections(data_collection_info, data_analysis_info["history"]["analysis_type"]))
+                if(len(data_analysis_info["ai_responses"])>max_data_analysis_responses_stored):
+                    data_analysis_info["ai_responses"] = data_analysis_info["ai_responses"][-max_data_analysis_responses_stored:] # keep only the last 5 responses
                 #data_collection_info["ai_response"] = "Data analysis complete."
 
         data_analysis_info["step_count"] += 1
@@ -277,8 +306,8 @@ async def handle_conversation_logic(turn_context: TurnContext, turn_state: TurnS
         if(data_analysis_info["step"] == "ask analysis type"):
             if("analysis_type" not in data_analysis_info["history"]):
                 await turn_context.send_activity(generate_analysis_type_menu())
-        else:
-            await turn_context.send_activity(f"would technically perform {data_analysis_info['history']['analysis_type']}.")
+        elif(data_analysis_info["step"] == "complete"):
+            await turn_context.send_activity(f"✅ Data Analysis Complete! Here's a brief summary of the analysis type '{data_analysis_info['history']['analysis_type']}':\n\n{data_analysis_info['ai_responses'][-1]}")
         # await turn_context.send_activity("Loading models to begin Data Analysis...")
         # Trigger your data analysis algorithms here
         
@@ -293,12 +322,16 @@ async def handle_conversation_logic(turn_context: TurnContext, turn_state: TurnS
                 # save the report style to the task state history
                 data_report_info["history"]["report_style"] = user_text
                 data_report_info["step"] = "ask delivery method"
-            elif(data_report_info["history"].get("delivery_method") is None):
+            elif(data_report_info["history"].get("delivery_method") is None): # TODO: actually send through email when delivery_method is 'email'
                 # save the delivery method to the task state history
                 data_report_info["history"]["delivery_method"] = user_text
                 data_report_info["step"] = "complete"
-                #data_collection_info["ai_response"] = "Data analysis complete."
-
+                # TODO(1): encapsulate appending and trimming the ai_responses list into a function
+                await turn_context.send_activity("⏳ Generating report with AI model...")
+                data_analysis_info = await data_analysis_accessor.get(turn_context, default_value_or_factory=lambda: copy.deepcopy(default_data_analysis_info))
+                data_report_info["ai_responses"].append(agent_core.generate_report(data_analysis_info, data_report_info["history"]["report_style"]))
+                if(len(data_report_info["ai_responses"])>max_data_report_responses_stored):
+                    data_report_info["ai_responses"] = data_report_info["ai_responses"][-max_data_report_responses_stored:] # keep only the last 3 responses
 
         data_report_info["step_count"] += 1
 
@@ -308,8 +341,8 @@ async def handle_conversation_logic(turn_context: TurnContext, turn_state: TurnS
         elif(data_report_info["step"] == "ask delivery method"):
             if("delivery_method" not in data_report_info["history"]):
                 await turn_context.send_activity(generate_delivery_method_menu())
-        else:
-            await turn_context.send_activity("Would technically generate a report in the style of " + data_report_info['history']['report_style'] + " and deliver it via " + data_report_info['history']['delivery_method'] + ".")
+        elif(data_report_info["step"] == "complete"):
+            await turn_context.send_activity(f"✅ Report Generation Complete! Here's a brief summary of the report style '{data_report_info['history']['report_style']}' with delivery method '{data_report_info['history']['delivery_method']}':\n\n{data_report_info['ai_responses'][-1]}")
         # Trigger your reporting logic here
 
         await data_report_accessor.set(turn_context, data_report_info)
@@ -336,10 +369,13 @@ async def handle_conversation_reset(turn_context: TurnContext, turn_state: TurnS
     await conversation_state.load(turn_context)
 
     # Clear all conversation state properties
-    await user_action_accessor.set(turn_context, copy.deepcopy(default_user_action))
-    await data_collection_accessor.set(turn_context, copy.deepcopy(default_data_collection_info))
-    await data_analysis_accessor.set(turn_context, copy.deepcopy(default_data_analysis_info))
-    await data_report_accessor.set(turn_context, copy.deepcopy(default_data_report_info))
+
+    await asyncio.gather(
+        user_action_accessor.set(turn_context, copy.deepcopy(default_user_action)),
+        data_collection_accessor.set(turn_context, copy.deepcopy(default_data_collection_info)),
+        data_analysis_accessor.set(turn_context, copy.deepcopy(default_data_analysis_info)),
+        data_report_accessor.set(turn_context, copy.deepcopy(default_data_report_info))
+    )
 
     # Save the cleared state back to persistent storage
     await conversation_state.save(turn_context)
@@ -363,6 +399,28 @@ async def members_added(turn_context: TurnContext, turn_state: TurnState):
         if member.id != turn_context.activity.recipient.id:
             await handle_conversation_reset(turn_context, turn_state)
 
+async def reset_data_collection_prompt_flow(turn_context: TurnContext):
+    data_collection_info = await data_collection_accessor.get(turn_context, default_value_or_factory=lambda: copy.deepcopy(default_data_collection_info))
+    data_collection_info["step"] = copy.deepcopy(default_data_collection_info["step"])
+    data_collection_info["history"] = copy.deepcopy(default_data_collection_info["history"])
+    data_collection_info["step_count"] = copy.deepcopy(default_data_collection_info["step_count"])
+    print("new step: ",data_collection_info["step"])
+    print("new step count: ",data_collection_info["step_count"])
+    await data_collection_accessor.set(turn_context, data_collection_info)
+
+async def reset_data_analysis_prompt_flow(turn_context: TurnContext):
+    data_analysis_info = await data_analysis_accessor.get(turn_context, default_value_or_factory=lambda: copy.deepcopy(default_data_analysis_info))
+    data_analysis_info["step"] = copy.deepcopy(default_data_analysis_info["step"])
+    data_analysis_info["history"] = copy.deepcopy(default_data_analysis_info["history"])
+    data_analysis_info["step_count"] = copy.deepcopy(default_data_analysis_info["step_count"])
+    await data_analysis_accessor.set(turn_context, data_analysis_info)
+
+async def reset_data_report_prompt_flow(turn_context: TurnContext):
+    data_report_info = await data_report_accessor.get(turn_context, default_value_or_factory=lambda: copy.deepcopy(default_data_report_info))
+    data_report_info["step"] = copy.deepcopy(default_data_report_info["step"])
+    data_report_info["history"] = copy.deepcopy(default_data_report_info["history"])
+    data_report_info["step_count"] = copy.deepcopy(default_data_report_info["step_count"])
+    await data_report_accessor.set(turn_context, data_report_info)
 async def handle_return_to_main_menu(turn_context: TurnContext, turn_state: TurnState):
     """
     Handles the command to return to the main menu.
@@ -371,7 +429,12 @@ async def handle_return_to_main_menu(turn_context: TurnContext, turn_state: Turn
     print("[RETURN TO MAIN MENU]: Resetting conversation state...")
     await conversation_state.load(turn_context)
 
-    await user_action_accessor.set(turn_context, copy.deepcopy(default_user_action))
+    await asyncio.gather(
+        user_action_accessor.set(turn_context, copy.deepcopy(default_user_action)),
+        reset_data_collection_prompt_flow(turn_context),
+        reset_data_analysis_prompt_flow(turn_context),
+        reset_data_report_prompt_flow(turn_context)
+    )
 
     await conversation_state.save(turn_context)
 
