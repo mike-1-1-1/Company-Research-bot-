@@ -10,12 +10,11 @@ from dotenv import load_dotenv
 from diskcache import Cache # TODO: make cache key construction more robust to be more insenstive to whitespace and punctuation differences in the input message
 
 class AgentCoreBase:
-    def __init__(self, name: str, config: Optional[Dict[str, Any]] = None, base_model: Optional[str] = "gpt-4o-mini", instructions: Optional[str] = "", max_tokens: Optional[int] = 100):
+    def __init__(self, name: str, config: Optional[Dict[str, Any]] = None, base_model: Optional[str] = "gpt-4o-mini", instructions: Optional[str] = ""):
         self.name = name
         self.config = config or {}
         self.base_model = base_model
         self.instructions = instructions
-        self.max_tokens = max_tokens
         self.state: Dict[str, Any] = {}
         self.cache = Cache(self.config.get('CACHE_DIR', f'./agent_core_cache_dir'))  # Default cache directory
         self.client = OpenAI(api_key=self.config.get('OPEN_AI_API_KEY', ''))
@@ -61,7 +60,7 @@ class AgentCoreBase:
         wait=wait_exponential(multiplier=1, min=2, max=4),
         retry=retry_if_exception_type(OpenAIError)
     )
-    def get_reply_from_openai(self, message: str, temperature: float = 0.5, web_search: bool = False) -> str:        
+    def get_reply_from_openai(self, message: str, temperature: float = 0.5, web_search: bool = False, max_output_tokens: Optional[int] = 100) -> str:        
         cache_value  = self.try_get_from_cache(message)
 
         if(cache_value is not None):
@@ -77,7 +76,7 @@ class AgentCoreBase:
                     tools=[{"type": "web_search_preview"}],
                     input=message,
                     temperature=temperature,
-                    max_output_tokens=self.max_tokens,
+                    max_output_tokens=max_output_tokens,
                     instructions=self.instructions)
                 ai_message = response.output_text
                 try:
@@ -99,13 +98,13 @@ class AgentCoreBase:
                         }
                     ],
                     temperature=temperature,
-                    max_tokens=self.max_tokens
+                    max_completion_tokens=max_output_tokens
                 )
                 
                 # Extract and print the generated text output
                 ai_message = response.choices[0].message.content
                 try:
-                    print(f"\n📊 [Tokens Used - Prompt: {response.usage.input_tokens}, Completion: {response.usage.output_tokens}]")
+                    print(f"\n📊 [Tokens Used - Prompt: {response.usage.prompt_tokens}, Completion: {response.usage.completion_tokens}, Total: {response.usage.total_tokens}]")
                 except AttributeError:
                     print("⚠️ Wasn't able to exact token usage information from the response.")
             print("🤖 AI Response:\n", ai_message)

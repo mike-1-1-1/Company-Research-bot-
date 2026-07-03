@@ -1,3 +1,5 @@
+#TODO: fix Exception caught : [Errno 54] Connection reset by peer
+
 # app.py
 from dotenv import load_dotenv
 from microsoft_agents.hosting.core import (
@@ -219,6 +221,21 @@ async def _other(turn_context: TurnContext, turn_state: TurnState):
 #         return False
 #     return True
 
+async def generate_data_report_summary(turn_context: TurnContext, data_report_info: dict, max_data_analysis_responses_stored: int) -> str:
+    # TODO(1): encapsulate appending and trimming the ai_responses list into a function
+    await turn_context.send_activity("⏳ Performing data analysis with AI model...")
+    data_analysis_info = await data_analysis_accessor.get(turn_context, default_value_or_factory=lambda: copy.deepcopy(default_data_collection_info))
+    data_report_info["ai_responses"].append(agent_core.generate_report(data_analysis_info, data_report_info["history"]["report_style"]))
+    if(len(data_report_info["ai_responses"])>max_data_analysis_responses_stored):
+        data_report_info["ai_responses"] = data_report_info["ai_responses"][-max_data_analysis_responses_stored:] # keep only the last responses
+    pass  # Placeholder for future implementation of report summary generation logic
+
+async def display_results_in_chunked_way(turn_context: TurnContext, display_beginning: str, ai_response: str):
+    ai_response_sections = [s.strip() for s in ai_response.split("\n\n") if s.strip()]
+    await turn_context.send_activity(display_beginning)
+    for ai_response_section in ai_response_sections:
+        await turn_context.send_activity(f"{ai_response_section}")
+
 async def handle_conversation_logic(turn_context: TurnContext, turn_state: TurnState):
     """
     Core activity handler routing the conversation state and rendering 
@@ -277,7 +294,7 @@ async def handle_conversation_logic(turn_context: TurnContext, turn_state: TurnS
             if("timeframe" not in data_collection_info["history"]):
                 await turn_context.send_activity("Please enter the timeframe you want to research. (Must be 2-100 characters)")
         elif data_collection_info["step"] == "complete":
-            await turn_context.send_activity(f"✅ Data Collection Complete! Here's a brief summary of the company '{data_collection_info['history']['company_name']}' focusing on '{data_collection_info['history']['company_topic']}' within the timeframe of '{data_collection_info['history']['timeframe']}':\n\n{data_collection_info['ai_responses'][-1]}")
+            await display_results_in_chunked_way(turn_context, f"✅ Data Collection Complete! Here's a brief summary of the company '{data_collection_info['history']['company_name']}' focusing on '{data_collection_info['history']['company_topic']}' within the timeframe of '{data_collection_info['history']['timeframe']}':",data_collection_info['ai_responses'][-1])
         # Trigger your data collection modules here
 
         # Update the local state cache with the modified dict properties
@@ -300,6 +317,7 @@ async def handle_conversation_logic(turn_context: TurnContext, turn_state: TurnS
                 if(len(data_analysis_info["ai_responses"])>max_data_analysis_responses_stored):
                     data_analysis_info["ai_responses"] = data_analysis_info["ai_responses"][-max_data_analysis_responses_stored:] # keep only the last 5 responses
                 #data_collection_info["ai_response"] = "Data analysis complete."
+                #data_collection_info["ai_response"] = "Data analysis complete."
 
         data_analysis_info["step_count"] += 1
 
@@ -307,8 +325,7 @@ async def handle_conversation_logic(turn_context: TurnContext, turn_state: TurnS
             if("analysis_type" not in data_analysis_info["history"]):
                 await turn_context.send_activity(generate_analysis_type_menu())
         elif(data_analysis_info["step"] == "complete"):
-            await turn_context.send_activity(f"✅ Data Analysis Complete! Here's a brief summary of the analysis type '{data_analysis_info['history']['analysis_type']}':\n\n{data_analysis_info['ai_responses'][-1]}")
-        # await turn_context.send_activity("Loading models to begin Data Analysis...")
+            await display_results_in_chunked_way(turn_context, f"✅ Data Analysis Complete! Here's a brief summary of the analysis type '{data_analysis_info['history']['analysis_type']}':",data_analysis_info['ai_responses'][-1])        # await turn_context.send_activity("Loading models to begin Data Analysis...")
         # Trigger your data analysis algorithms here
         
         await data_analysis_accessor.set(turn_context, data_analysis_info)
@@ -325,13 +342,16 @@ async def handle_conversation_logic(turn_context: TurnContext, turn_state: TurnS
             elif(data_report_info["history"].get("delivery_method") is None): # TODO: actually send through email when delivery_method is 'email'
                 # save the delivery method to the task state history
                 data_report_info["history"]["delivery_method"] = user_text
+                data_report_info["step"] = "ask email address" if "email" in data_report_info["history"]["delivery_method"].lower() else "complete"
+                if(data_report_info["step"] == "complete"):
+                    # generate the report summary
+                    await generate_data_report_summary(turn_context, data_report_info, max_data_analysis_responses_stored)
+            elif(data_report_info["history"].get("email_address") is None and "email" in data_report_info["history"]["delivery_method"].lower()):
+                # save the email address to the task state history
+                data_report_info["history"]["email_address"] = user_text
                 data_report_info["step"] = "complete"
-                # TODO(1): encapsulate appending and trimming the ai_responses list into a function
-                await turn_context.send_activity("⏳ Generating report with AI model...")
-                data_analysis_info = await data_analysis_accessor.get(turn_context, default_value_or_factory=lambda: copy.deepcopy(default_data_analysis_info))
-                data_report_info["ai_responses"].append(agent_core.generate_report(data_analysis_info, data_report_info["history"]["report_style"]))
-                if(len(data_report_info["ai_responses"])>max_data_report_responses_stored):
-                    data_report_info["ai_responses"] = data_report_info["ai_responses"][-max_data_report_responses_stored:] # keep only the last 3 responses
+                # generate the report summary
+                await generate_data_report_summary(turn_context, data_report_info, max_data_analysis_responses_stored)
 
         data_report_info["step_count"] += 1
 
@@ -341,8 +361,17 @@ async def handle_conversation_logic(turn_context: TurnContext, turn_state: TurnS
         elif(data_report_info["step"] == "ask delivery method"):
             if("delivery_method" not in data_report_info["history"]):
                 await turn_context.send_activity(generate_delivery_method_menu())
+        elif(data_report_info["step"] == "ask email address"):
+            if("email_address" not in data_report_info["history"]):
+                await turn_context.send_activity("Please enter the email address where you would like the report to be sent.")
         elif(data_report_info["step"] == "complete"):
-            await turn_context.send_activity(f"✅ Report Generation Complete! Here's a brief summary of the report style '{data_report_info['history']['report_style']}' with delivery method '{data_report_info['history']['delivery_method']}':\n\n{data_report_info['ai_responses'][-1]}")
+            if("display" in data_report_info["history"].get("delivery_method").lower()):
+                #display the report summary directly in the chat
+                await display_results_in_chunked_way(turn_context, f"✅ Report Generation Complete! Here's a brief summary of the report style '{data_report_info['history']['report_style']}' with delivery method '{data_report_info['history']['delivery_method']}':",data_report_info['ai_responses'][-1])
+            else:
+                # send the report summary to the provided email address (this is a placeholder; actual email sending logic would be implemented here)
+                # 
+                await turn_context.send_activity(f"✅ Report Generation Complete! The report would technically be sent (but for demonstration purposes it won't be sent to keep project concise as a proof of concept focused on AI and not email delivery) to '{data_report_info['history']['email_address']}' with the report style '{data_report_info['history']['report_style']}'.\n")
         # Trigger your reporting logic here
 
         await data_report_accessor.set(turn_context, data_report_info)
