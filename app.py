@@ -122,8 +122,12 @@ max_data_analysis_responses_stored = 3
 max_data_report_responses_stored = 3
 
 load_dotenv()
-agent_core = CompanyResearchAgent(name="CompanyCoreResearchAgent", config={"OPEN_AI_API_KEY": os.getenv("OPEN_AI_API_KEY")})
-
+try:
+    agent_core = CompanyResearchAgent(name="CompanyCoreResearchAgent", config={"OPEN_AI_API_KEY": os.getenv("OPEN_AI_API_KEY")})
+except Exception as e:
+    print(f"❌ Failed to initialize CompanyResearchAgent: {e}")
+    raise e
+agent_core
 class InputInterceptorMiddleware:
     async def on_turn(
         self, 
@@ -152,16 +156,26 @@ class InputInterceptorMiddleware:
                 data_collection_info = await data_collection_accessor.get(turn_context, default_value_or_factory=lambda: copy.deepcopy(default_data_collection_info))
                 if(data_collection_info["step"] == "ask company name"):
                     #TODO: validate with ai if the company exists
-                    if not agent_core.does_company_name_probably_exist(user_raw_input):
-                        await turn_context.send_activity(f"The company name '{user_raw_input}' does not seem to exist. Please enter a valid company name.")
+                    try:
+                        if not agent_core.does_company_name_probably_exist(user_raw_input):
+                            await turn_context.send_activity(f"The company name '{user_raw_input}' does not seem to exist. Please enter a valid company name.")
+                            return # Stops execution entirely; never calls next_turn()
+                    except Exception as e:
+                        print(f"Error validating company name: {e}")
+                        await turn_context.send_activity(f"Error validating company name. Please try again.")
                         return # Stops execution entirely; never calls next_turn()
                 elif(data_collection_info["step"] == "ask company topic"):
                     #no validation for now, but could validate if the topic is relevant to the company
                     pass
                 elif(data_collection_info["step"] == "ask timeframe"):
                     #TODO: validate with ai if the timeframe is a valid timeframe (e.g., "last 5 years", "Q1 2023", etc.)
-                    if not agent_core.is_time_frame_valid(user_raw_input):
-                        await turn_context.send_activity(f"The time frame '{user_raw_input}' is not valid. Please enter a valid time frame. (such as 'last 5 years', 'Q1 2023', etc.)")
+                    try: 
+                        if not agent_core.is_time_frame_valid(user_raw_input):
+                            await turn_context.send_activity(f"The time frame '{user_raw_input}' is not valid. Please enter a valid time frame. (such as 'last 5 years', 'Q1 2023', etc.)")
+                        return # Stops execution entirely; never calls next_turn()
+                    except Exception as e:
+                        print(f"Error validating time frame: {e}")
+                        await turn_context.send_activity(f"Error validating time frame. Please try again.")
                         return # Stops execution entirely; never calls next_turn()
             elif(user_action['user_action'] == "Data Analysis"):
                 data_analysis_info = await data_analysis_accessor.get(turn_context, default_value_or_factory=lambda: copy.deepcopy(default_data_analysis_info))
@@ -225,7 +239,12 @@ async def generate_data_report_summary(turn_context: TurnContext, data_report_in
     # TODO(1): encapsulate appending and trimming the ai_responses list into a function
     await turn_context.send_activity("⏳ Performing data analysis with AI model...")
     data_analysis_info = await data_analysis_accessor.get(turn_context, default_value_or_factory=lambda: copy.deepcopy(default_data_collection_info))
-    data_report_info["ai_responses"].append(agent_core.generate_report(data_analysis_info, data_report_info["history"]["report_style"]))
+    try:
+        data_report_info["ai_responses"].append(agent_core.generate_report(data_analysis_info, data_report_info["history"]["report_style"]))
+    except Exception as e:
+        print(f"Error generating report: {e}")
+        await turn_context.send_activity(f"Error generating report. Please try again.")
+        return "Error generating report."
     if(len(data_report_info["ai_responses"])>max_data_analysis_responses_stored):
         data_report_info["ai_responses"] = data_report_info["ai_responses"][-max_data_analysis_responses_stored:] # keep only the last responses
     pass  # Placeholder for future implementation of report summary generation logic
@@ -274,7 +293,12 @@ async def handle_conversation_logic(turn_context: TurnContext, turn_state: TurnS
                 data_collection_info["history"]["timeframe"] = user_text
                 await turn_context.send_activity("⏳ Collecting data from AI model...")
                 # TODO(1): encapsulate appending and trimming the ai_responses list into a function
-                data_collection_info["ai_responses"].append(agent_core.get_company_info(data_collection_info["history"]["company_name"], data_collection_info["history"]["company_topic"], data_collection_info["history"]["timeframe"]))
+                try:
+                    data_collection_info["ai_responses"].append(agent_core.get_company_info(data_collection_info["history"]["company_name"], data_collection_info["history"]["company_topic"], data_collection_info["history"]["timeframe"]))
+                except Exception as e:
+                    print(f"Error generating report: {e}")
+                    await turn_context.send_activity(f"Error generating report. Please try again.")
+                    return "Error generating report."
                 if(len(data_collection_info["ai_responses"])>max_data_collection_responses_stored):
                     data_collection_info["ai_responses"] = data_collection_info["ai_responses"][-max_data_collection_responses_stored:] # keep only the last 5 responses
                 data_collection_info["step"] = "complete"
@@ -313,7 +337,12 @@ async def handle_conversation_logic(turn_context: TurnContext, turn_state: TurnS
                 # TODO(1): encapsulate appending and trimming the ai_responses list into a function
                 await turn_context.send_activity("⏳ Performing data analysis with AI model...")
                 data_collection_info = await data_collection_accessor.get(turn_context, default_value_or_factory=lambda: copy.deepcopy(default_data_collection_info))
-                data_analysis_info["ai_responses"].append(agent_core.do_analysis_on_data_collections(data_collection_info, data_analysis_info["history"]["analysis_type"]))
+                try:
+                    data_analysis_info["ai_responses"].append(agent_core.do_analysis_on_data_collections(data_collection_info, data_analysis_info["history"]["analysis_type"]))
+                except Exception as e:
+                    print(f"Error performing data analysis: {e}")
+                    await turn_context.send_activity(f"Error performing data analysis. Please try again.")
+                    return "Error performing data analysis."
                 if(len(data_analysis_info["ai_responses"])>max_data_analysis_responses_stored):
                     data_analysis_info["ai_responses"] = data_analysis_info["ai_responses"][-max_data_analysis_responses_stored:] # keep only the last 5 responses
                 #data_collection_info["ai_response"] = "Data analysis complete."
@@ -345,6 +374,7 @@ async def handle_conversation_logic(turn_context: TurnContext, turn_state: TurnS
                 data_report_info["step"] = "ask email address" if "email" in data_report_info["history"]["delivery_method"].lower() else "complete"
                 if(data_report_info["step"] == "complete"):
                     # generate the report summary
+                    print(f"Generating report summary...")
                     await generate_data_report_summary(turn_context, data_report_info, max_data_analysis_responses_stored)
             elif(data_report_info["history"].get("email_address") is None and "email" in data_report_info["history"]["delivery_method"].lower()):
                 # save the email address to the task state history

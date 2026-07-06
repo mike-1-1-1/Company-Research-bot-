@@ -17,7 +17,12 @@ class AgentCoreBase:
         self.instructions = instructions
         self.state: Dict[str, Any] = {}
         self.cache = Cache(self.config.get('CACHE_DIR', f'./agent_core_cache_dir'))  # Default cache directory
-        self.client = OpenAI(api_key=self.config.get('OPEN_AI_API_KEY', ''))
+        
+        try:
+            self.client = OpenAI(api_key=self.config.get('OPEN_AI_API_KEY', ''))
+        except Exception as e:
+            print(f"❌ Failed to initialize OpenAI client: {e}")
+            raise e
 
         #self.state['message_history'] = []
 
