@@ -1,4 +1,7 @@
 #TODO: fix Exception caught : [Errno 54] Connection reset by peer
+#TODO: add more targeted exception handling.
+#TODO: add more robust logging and monitoring for production deployment.
+
 
 # app.py
 from dotenv import load_dotenv
