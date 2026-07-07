@@ -4,6 +4,13 @@ A proof of concept of an AI-powered research assistant thats helps analysts quic
 # Install dependencies
 pip install -r requirements.txt
 
+# Run python bot backend
+python3 app.py
+
+# Run Microsoft 365 Agents SDK bot emulator
+teamsapptester
+
 # Run unit tests
 - python3 -m pytest -v "testing/unit_testing/test_company_research_agent.py"
+
 
