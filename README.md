@@ -13,4 +13,8 @@ teamsapptester
 # Run unit tests
 - python3 -m pytest -v "testing/unit_testing/test_company_research_agent.py"
 
+## Architecture Diagram
+
+See [architecture-diagram.md](architecture-diagram.md).
+
 
