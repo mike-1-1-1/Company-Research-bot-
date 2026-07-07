@@ -1,6 +1,5 @@
 #TODO: fix Exception caught : [Errno 54] Connection reset by peer
 #TODO: add more targeted exception handling.
-#TODO: add more robust logging and monitoring for production deployment.
 #TODO: add integration testing
 
 # app.py
@@ -160,7 +159,6 @@ class InputInterceptorMiddleware:
             if(user_action['user_action'] == "Data Collection"):
                 data_collection_info = await data_collection_accessor.get(turn_context, default_value_or_factory=lambda: copy.deepcopy(default_data_collection_info))
                 if(data_collection_info["step"] == "ask company name"):
-                    #TODO: validate with ai if the company exists
                     try:
                         if not agent_core.does_company_name_probably_exist(user_raw_input):
                             await turn_context.send_activity(f"The company name '{user_raw_input}' does not seem to exist. Please enter a valid company name.")
@@ -173,7 +171,6 @@ class InputInterceptorMiddleware:
                     #no validation for now, but could validate if the topic is relevant to the company
                     pass
                 elif(data_collection_info["step"] == "ask timeframe"):
-                    #TODO: validate with ai if the timeframe is a valid timeframe (e.g., "last 5 years", "Q1 2023", etc.)
                     try: 
                         if not agent_core.is_time_frame_valid(user_raw_input):
                             await turn_context.send_activity(f"The time frame '{user_raw_input}' is not valid. Please enter a valid time frame. (such as 'last 5 years', 'Q1 2023', etc.)")
