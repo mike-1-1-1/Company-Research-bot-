@@ -4,3 +4,4 @@ microsoft-agents-activity
 openai
 diskcache
 tenacity
+pytest
