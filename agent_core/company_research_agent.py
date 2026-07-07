@@ -2,6 +2,21 @@ from agent_core.agent_core_base import AgentCoreBase
 
 from typing import Any, Dict, Optional
 
+# #import Logger from logging.py
+
+# from pathlib import Path
+# import sys
+
+# # Get the absolute path of the parent directory
+# parent_dir = str(Path(__file__).resolve().parent.parent)
+
+# # Insert the parent directory into the system path
+# sys.path.insert(0, parent_dir)
+
+# # Now you can import directly from the parent folder
+
+# from logging import Logger
+
 class CompanyResearchAgent(AgentCoreBase):
     def __init__(self, name: str, config: Optional[Dict[str, Any]] = None, base_model: Optional[str] = "gpt-4o-mini", instructions: Optional[str] = ""):
         if(instructions == ""):

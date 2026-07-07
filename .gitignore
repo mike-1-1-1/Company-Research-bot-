@@ -3,3 +3,4 @@ agent_core_cache_dir
 __pycache__
 devTools
 venv
+bot.log

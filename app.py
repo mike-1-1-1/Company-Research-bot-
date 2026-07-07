@@ -26,6 +26,8 @@ import copy
 
 import asyncio
 
+from bot_logging import Logger 
+
 def generate_selection_menu() -> Activity:
     """
     Generates an interactive selection menu with suggested actions for the user.
@@ -128,7 +130,7 @@ load_dotenv()
 try:
     agent_core = CompanyResearchAgent(name="CompanyCoreResearchAgent", config={"OPEN_AI_API_KEY": os.getenv("OPEN_AI_API_KEY")})
 except Exception as e:
-    print(f"❌ Failed to initialize CompanyResearchAgent: {e}")
+    Logger.error(f"❌ Failed to initialize CompanyResearchAgent: {e}")
     raise e
 agent_core
 class InputInterceptorMiddleware:
@@ -147,7 +149,7 @@ class InputInterceptorMiddleware:
 
         if turn_context.activity.type == "message" and turn_context.activity.text:
             user_raw_input = turn_context.activity.text.lower().strip() if turn_context.activity.text else ""
-            print(f"[APPLICATION INTERCEPTED]: {user_raw_input}, action: {user_action['user_action']}")
+            Logger.info(f"[APPLICATION INTERCEPTED]: {user_raw_input}, action: {user_action['user_action']}")
 
             if(user_raw_input):
                 # Example: Validate user input length for Data Collection workflow
@@ -164,7 +166,7 @@ class InputInterceptorMiddleware:
                             await turn_context.send_activity(f"The company name '{user_raw_input}' does not seem to exist. Please enter a valid company name.")
                             return # Stops execution entirely; never calls next_turn()
                     except Exception as e:
-                        print(f"Error validating company name: {e}")
+                        Logger.error(f"Error validating company name: {e}")
                         await turn_context.send_activity(f"Error validating company name. Please try again.")
                         return # Stops execution entirely; never calls next_turn()
                 elif(data_collection_info["step"] == "ask company topic"):
@@ -177,7 +179,7 @@ class InputInterceptorMiddleware:
                             await turn_context.send_activity(f"The time frame '{user_raw_input}' is not valid. Please enter a valid time frame. (such as 'last 5 years', 'Q1 2023', etc.)")
                         return # Stops execution entirely; never calls next_turn()
                     except Exception as e:
-                        print(f"Error validating time frame: {e}")
+                        Logger.error(f"Error validating time frame: {e}")
                         await turn_context.send_activity(f"Error validating time frame. Please try again.")
                         return # Stops execution entirely; never calls next_turn()
             elif(user_action['user_action'] == "Data Analysis"):
@@ -245,7 +247,7 @@ async def generate_data_report_summary(turn_context: TurnContext, data_report_in
     try:
         data_report_info["ai_responses"].append(agent_core.generate_report(data_analysis_info, data_report_info["history"]["report_style"]))
     except Exception as e:
-        print(f"Error generating report: {e}")
+        Logger.error(f"Error generating report: {e}")
         await turn_context.send_activity(f"Error generating report. Please try again.")
         return "Error generating report."
     if(len(data_report_info["ai_responses"])>max_data_analysis_responses_stored):
@@ -280,7 +282,7 @@ async def handle_conversation_logic(turn_context: TurnContext, turn_state: TurnS
         # assume for now company name would be provided (would need to validate with AI model probably)
         #print(f"(1) Step Count: {data_collection_info['step_count']}, Current Step: {data_collection_info['step']}, User Input: {user_text}")
 
-        print(f"Step Count: {data_collection_info['step_count']}, Current Step: {data_collection_info['step']}, User Input: {user_text}")
+        Logger.info(f"Step Count: {data_collection_info['step_count']}, Current Step: {data_collection_info['step']}, User Input: {user_text}")
 
         if(data_collection_info["step_count"] > 0):
             if(data_collection_info["history"].get("company_name") is None):
@@ -299,7 +301,7 @@ async def handle_conversation_logic(turn_context: TurnContext, turn_state: TurnS
                 try:
                     data_collection_info["ai_responses"].append(agent_core.get_company_info(data_collection_info["history"]["company_name"], data_collection_info["history"]["company_topic"], data_collection_info["history"]["timeframe"]))
                 except Exception as e:
-                    print(f"Error generating report: {e}")
+                    Logger.error(f"Error generating report: {e}")
                     await turn_context.send_activity(f"Error generating report. Please try again.")
                     return "Error generating report."
                 if(len(data_collection_info["ai_responses"])>max_data_collection_responses_stored):
@@ -343,7 +345,7 @@ async def handle_conversation_logic(turn_context: TurnContext, turn_state: TurnS
                 try:
                     data_analysis_info["ai_responses"].append(agent_core.do_analysis_on_data_collections(data_collection_info, data_analysis_info["history"]["analysis_type"]))
                 except Exception as e:
-                    print(f"Error performing data analysis: {e}")
+                    Logger.error(f"Error performing data analysis: {e}")
                     await turn_context.send_activity(f"Error performing data analysis. Please try again.")
                     return "Error performing data analysis."
                 if(len(data_analysis_info["ai_responses"])>max_data_analysis_responses_stored):
@@ -377,7 +379,7 @@ async def handle_conversation_logic(turn_context: TurnContext, turn_state: TurnS
                 data_report_info["step"] = "ask email address" if "email" in data_report_info["history"]["delivery_method"].lower() else "complete"
                 if(data_report_info["step"] == "complete"):
                     # generate the report summary
-                    print(f"Generating report summary...")
+                    Logger.info(f"Generating report summary...")
                     await generate_data_report_summary(turn_context, data_report_info, max_data_analysis_responses_stored)
             elif(data_report_info["history"].get("email_address") is None and "email" in data_report_info["history"]["delivery_method"].lower()):
                 # save the email address to the task state history
@@ -427,7 +429,7 @@ async def handle_conversation_reset(turn_context: TurnContext, turn_state: TurnS
     """
     Resets the conversation state and presents the initial selection menu to the user.
     """
-    print("[PLAYGROUND RESET]: Wiping conversation state...")
+    Logger.info("[PLAYGROUND RESET]: Wiping conversation state...")
     await conversation_state.load(turn_context)
 
     # Clear all conversation state properties
@@ -466,8 +468,8 @@ async def reset_data_collection_prompt_flow(turn_context: TurnContext):
     data_collection_info["step"] = copy.deepcopy(default_data_collection_info["step"])
     data_collection_info["history"] = copy.deepcopy(default_data_collection_info["history"])
     data_collection_info["step_count"] = copy.deepcopy(default_data_collection_info["step_count"])
-    print("new step: ",data_collection_info["step"])
-    print("new step count: ",data_collection_info["step_count"])
+    #print("new step: ",data_collection_info["step"])
+    #print("new step count: ",data_collection_info["step_count"])
     await data_collection_accessor.set(turn_context, data_collection_info)
 
 async def reset_data_analysis_prompt_flow(turn_context: TurnContext):
@@ -488,7 +490,7 @@ async def handle_return_to_main_menu(turn_context: TurnContext, turn_state: Turn
     Handles the command to return to the main menu.
     Resets the conversation state and presents the initial selection menu.
     """
-    print("[RETURN TO MAIN MENU]: Resetting conversation state...")
+    Logger.info("[RETURN TO MAIN MENU]: Resetting conversation state...")
     await conversation_state.load(turn_context)
 
     await asyncio.gather(

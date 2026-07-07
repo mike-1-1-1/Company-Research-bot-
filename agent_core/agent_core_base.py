@@ -1,13 +1,26 @@
 
-import asyncio
 from http.client import NOT_FOUND
-from linecache import cache
-from random import randint
 from typing import Any, Dict, Optional
 from openai import OpenAI, OpenAIError
 from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_exception_type
 from dotenv import load_dotenv
 from diskcache import Cache # TODO: make cache key construction more robust to be more insenstive to whitespace and punctuation differences in the input message
+
+
+#import Logger from logging.py
+
+from pathlib import Path
+import sys
+
+# Get the absolute path of the parent directory
+parent_dir = str(Path(__file__).resolve().parent.parent)
+
+# Insert the parent directory into the system path
+sys.path.insert(0, parent_dir)
+
+# Now you can import directly from the parent folder
+
+from bot_logging import Logger 
 
 class AgentCoreBase:
     def __init__(self, name: str, config: Optional[Dict[str, Any]] = None, base_model: Optional[str] = "gpt-4o-mini", instructions: Optional[str] = ""):
@@ -21,7 +34,7 @@ class AgentCoreBase:
         try:
             self.client = OpenAI(api_key=self.config.get('OPEN_AI_API_KEY', ''))
         except Exception as e:
-            print(f"❌ Failed to initialize OpenAI client: {e}")
+            Logger.error(f"❌ Failed to initialize OpenAI client: {e}")
             raise e
 
         #self.state['message_history'] = []
@@ -69,13 +82,13 @@ class AgentCoreBase:
         cache_value  = self.try_get_from_cache(message)
 
         if(cache_value is not None):
-            print("✅ Cache hit for message:", message, "Returning cached response:", cache_value)
+            Logger.info(f"✅ Cache hit for message: {message}, Returning cached response: {cache_value}")
             return cache_value
 
         try:
 
             if(web_search):
-                print("🔍 Performing query with web search for message:", message)
+                Logger.info(f"🔍 Performing query with web search for message: {message}")
                 response = self.client.responses.create(
                     model=self.base_model,
                     tools=[{"type": "web_search_preview"}],
@@ -85,11 +98,11 @@ class AgentCoreBase:
                     instructions=self.instructions)
                 ai_message = response.output_text
                 try:
-                    print(f"\n📊 [Tokens Used - Prompt: {response.usage.input_tokens}, Completion: {response.usage.output_tokens}, Total tokens: {response.usage.total_tokens}]")
+                    Logger.info(f"\n📊 [Tokens Used - Prompt: {response.usage.input_tokens}, Completion: {response.usage.output_tokens}, Total tokens: {response.usage.total_tokens}]")
                 except AttributeError:
-                    print("⚠️ Wasn't able to exact token usage information from the response.")
+                    Logger.warning("⚠️ Wasn't able to exact token usage information from the response.")
             else:
-                print("💬 Performing query without web search for message:", message)
+                Logger.info(f"💬 Performing query without web search for message: {message}")
                 response = self.client.chat.completions.create(
                     model=self.base_model, 
                     messages=[
@@ -106,26 +119,26 @@ class AgentCoreBase:
                     max_completion_tokens=max_output_tokens
                 )
                 
-                # Extract and print the generated text output
+                # Extract and log the generated text output
                 ai_message = response.choices[0].message.content
                 try:
-                    print(f"\n📊 [Tokens Used - Prompt: {response.usage.prompt_tokens}, Completion: {response.usage.completion_tokens}, Total: {response.usage.total_tokens}]")
+                    Logger.info(f"\n📊 [Tokens Used - Prompt: {response.usage.prompt_tokens}, Completion: {response.usage.completion_tokens}, Total: {response.usage.total_tokens}]")
                 except AttributeError:
-                    print("⚠️ Wasn't able to exact token usage information from the response.")
-            print("🤖 AI Response:\n", ai_message)
+                    Logger.warning("⚠️ Wasn't able to exact token usage information from the response.")
+            Logger.info(f"🤖 AI Response:\n{ai_message}")
             
-            # Optional: Print token usage information
+            #Log token usage information
 
             self.cache.set(message, ai_message, expire = 86400)  # Cache the response for future requests, with an expiration time of 1 day (i.e. 86400 seconds)
 
             return ai_message
         except Exception as e:
-            print(f"❌ An error occurred: {e}")
+            Logger.error(f"❌ An error occurred: {e}")
 
         return "error: Unable to get a response from OpenAI."    
 
     async def get_reply(self, message: str) -> str:
-        print(f"[{self.name}] Received message: {message}")
+        Logger.info(f"[{self.name}] Received message: {message}")
 
         # self.append_user_message(message)
 
