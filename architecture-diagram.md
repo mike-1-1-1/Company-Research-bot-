@@ -3,14 +3,20 @@
 ```mermaid
 flowchart LR
     U[User Client] -->|User query| A[app.py]
-    A --> M[Input Interceptor Middleware]
+    A --> M["<b>Input Interceptor Middleware</b><br/><i>Validates user input</i>"]
     A --> S[Conversation State / Memory Storage]
     A --> B[CompanyResearchAgent]
     B --> |Inherits| Y[AgentCoreBase]
-    Y --> |users| L
-    B --> |Calls| O[OpenAI model without search tool]
-    B --> |Calls| W[OpenAI model with search tool]
-    A --> |uses| L[Logger]
+    Y --> |uses| L[Logger]
+    A --> |uses| L
+
+    subgraph OpenAICloud[OpenAI Cloud]
+        O[OpenAI model without search tool]
+        W[OpenAI model with search tool]
+    end
+
+    B -->|Calls| O
+    B -->|Calls| W
     L --> |logs to| X[bot.log file]
     T[Testing suite] --> B
 
