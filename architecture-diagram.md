@@ -4,6 +4,7 @@
 flowchart LR
     U["👤 User Client"] -->|💬 User query| A["📄 app.py"]
     A --> M["🛡️ Input Interceptor Middleware"]
+    M --> A
     A --> S["🧠 Conversation State / Memory Storage"]
     A --> B["🤖 CompanyResearchAgent"]
     B --> |🔁 Inherits| Y["🧩 AgentCoreBase"]
