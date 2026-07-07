@@ -36,7 +36,7 @@ teamsapptester
 
 ## 🏗️ Architecture Diagram
 
-See [architecture-diagram.md](architecture-diagram.md).
+See [architecture-diagram.md](./docs/architecture-diagram.md).
 
 ## 📋 Specifications
 - AI Model: gpt-4o-mini
